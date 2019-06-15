@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div>
     <!--star  nav-btn -->
     <div
       class="nav-btn nav-btn-fix"
@@ -19,7 +19,6 @@
 
     <!--star header -->
     <transition
-      name="custom-classes-transition"
       enter-active-class="animated slideInDown"
       leave-active-class="animated slideOutUp"
     >
@@ -38,7 +37,7 @@
                 @mouseover="hoverIndex = index"
                 @mouseout="hoverIndex = -1"
                 :class="{'active':index==hoverIndex}"
-                
+
               >
                 <a href>{{item.menu}}</a>
                 <transition
@@ -102,13 +101,13 @@
                   <span v-if="showNavIndex !=index">+</span>
                 </div>
                 <span>{{item.menu}}</span>
-              </dt> 
+              </dt>
               <div  class="dd-list" >
                 <dd v-for="(subitem,i) in item.subMenu " v-bind:key="i">
                   <a href>{{subitem.name}}</a>
                 </dd>
               </div>
-              
+
             </dl>
           </div>
           <div class="col-sm-5 hidden-xs">
