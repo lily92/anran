@@ -1,0 +1,173 @@
+$colorb:#3cafd6;
+body{ overflow-x: hidden; overflow-y:scroll; width: 100%;color:#333;font-size:14px; font-family:"MicrosoftYaHei"; line-height:30px;}
+body,dd,dl,dt,form,h1,h2,h3,h4,h5,li,ol,p,ul{margin:0;padding:0;}
+li,ol,ul{list-style:none;}
+img{max-width:100%;border:none;}
+a:hover{ text-decoration: none;}
+input{ outline: none;}
+.text-center{ text-align: center;}
+.text-left{ text-align: left}
+.text-right{ text-align: right}
+.nowarp{ white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.flex-item{ display: flex; flex-wrap: wrap; align-items: center;justify-content: center}
+.w100{ width: 100%;}
+.margin-b40{ margin-bottom: 40px;}
+.scale{ overflow: hidden;}
+.scale:hover img{ transition: .5s linear all;  transform: scale(1.1);}
+.line2{text-overflow: -o-ellipsis-lastline; overflow: hidden; text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;}
+
+/*star-index*/
+.btn-more {
+  width: 350px;
+  height: 60px;
+  border: 2px solid #000;
+  line-height: 60px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: #000;
+  position: relative;
+}
+.btn-more::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: -40px;
+  top: 29px;
+}
+.btn{ position: relative; }
+.btn span{ position: relative; z-index: 2;}
+.btn::before{ position: absolute; left: 0; top: 0; content: ''; width: 0; background:#fff; height: 100%; color: #fff;transition: .2s linear all}
+.btn:hover::before{ width: 100%;transition: .2s linear all}
+.btn:hover::after{ left: -50px;transition: .2s linear all; background: #1883a3;}
+.btn:hover{ border-color:#1883a3; color: #1883a3;}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{ bottom: 20px;}
+.swiper-pagination-bullet{ background: #fff !important; opacity: 1;}
+.swiper-pagination-bullet-active{ background: #2aa5d0 !important; width: 20px; border-radius: 5px; } 
+.swiper-button-prev{ background: url(../images/btn-left.png) no-repeat left center; background-size: contain; left: 20px;}
+.swiper-button-next{ background: url(../images/btn-right.png) no-repeat left center; background-size: contain; right: 20px;}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{ margin: 0 6px;}
+.title-cn{ font-size: 30px; color: #000; font-weight: normal;
+ span{ color: #3cafd6}
+}
+.title-eng{ color: #d9d9d9; font-size: 18px; text-transform: uppercase}
+
+/*全屏滚动*/
+#fp-nav ul li, .fp-slidesNav ul li{ height: 18px;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{ width: 7px; height: 7px; background: none; border: 1px solid #333;} 
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+  height: 19px;
+  width: 19px;
+  margin: -6px 0 0 -8px; border-color: #c6c6c6; 
+}
+#fp-nav ul li a.active span::after{ position: absolute; left: 5px; top: 5px; width: 7px; height: 7px; border-radius: 100%; border: 1px solid #333; content: ''}
+#fp-nav ul li .fp-tooltip{ top: -3px;color: #333;}
+
+/*end index*/
+.nav-btn{
+   display: block; width: 40px; padding: 15px; 
+  span{ width: 20px; height: 4px; background: #000; display: block; position: relative;}
+  span::before{ display: block; content: ''; width: 15px; height: 4px; background: #000; position: absolute; left: 0; top: -8px}
+  span::after{ display: block; content: ''; width: 10px; height: 4px; background: #000; position: absolute; left: 0; top: 8px}
+}
+.nav-btn-close{
+  span{width: 20px;transform: rotate(45deg); transition: .5s linear all}
+  span::before{ width: 0 ;transition: .5s linear all}
+  span::after{ width: 20px; transform:translateY(-8px) rotate(100deg);transition: .5s linear all}
+}
+/*search-container*/
+.search-container{ width: 460px; height: 80px; background: url(../images/search-bg.png) no-repeat center; background-size: cover; position: fixed; right: 0; top: 100px;  z-index: 2; border-top: 1px solid $colorb;justify-content: space-evenly;}
+.search-close{ font-size: 30px; color: $colorb; padding: 5px 10px; cursor: pointer;}
+.search-txt{ width: 200px; border: 0;}
+.search-btn{ background: none; border: 0;}
+
+/*nav*/
+.nav-btn-fix{ position: fixed; right: 40px; top: 40px; z-index: 99999;}
+.nav-btn-fix span{ background: #fff;}
+.nav-btn-fix span::after,.nav-btn-fix span::before{ background: #fff;}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  /**header*/
+  .header{
+     position: fixed; width: 100%; height: 100px; left: 0; top: 0; z-index: 9; background: #fff; flex-wrap: nowrap; justify-content: space-between; padding: 0 40px;
+  }
+  .header-right{ flex-wrap: nowrap;}
+  nav ul.flex-item{ flex-wrap: nowrap;}
+  nav ul li{  font-size: 16px;  position: relative; }
+  nav ul a{ color: #000; display: block; height: 100px; line-height: 100px; padding: 0 10px; font-size: 13px;}
+  nav ul li dl{ position: absolute; left: 0; top: 100px; background: $colorb; width: 100%; text-align: center; transition: 1s linear all; opacity: 0; height: 0; }
+  nav ul li.active dl{ transition: 1s linear all; opacity: 1; height: auto;  }
+  nav ul li:hover, nav ul li.active{ background: $colorb; text-align: center;}
+  nav ul li:hover a, nav ul li.active a{color: #fff; }
+  .search{ padding: 0 20px;}
+  nav ul li dl a{ line-height: 45px; height: 45px;color: #fff; border-bottom: 1px solid #fff; font-size: 13px;  padding: 0; }
+  nav ul li dl a:hover{ background: #fff; color: $colorb;}
+
+  /*nav*/
+  .nav-fix-logo{ padding: 40px 45px;}
+  .nav-fix{
+    position: fixed; z-index: 999; background: #008fc4; width: 100%; height: 100%; left: 0; top: 0; color: #fff;
+    dl{ margin-bottom: 70px;}
+    dt{ font-size: 24px;}
+    dd a{ font-size: 14px;}
+    a{ color: #fff; display: block;}
+    a:hover{ text-decoration: underline; transform: translateX(3px); transition: .2s linear all}
+    
+  } 
+  .nav-p{ color: #ffecc3; font-size: 24px;text-align: center;}
+  .nav-all{ align-items: flex-start;}
+  
+
+
+
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  nav ul a{ padding: 0 15px; font-size: 16px}
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  nav ul a{ padding: 0 30px;}
+}
+
+@media  (max-width: 767px) {
+  .margin-b40{ margin-bottom:20px;}
+  .header{  justify-content: space-between; padding: 10px 10px 10px 20px; position: fixed; left: 0; top: 0; width: 100%; background: #fff;}
+  nav{ display: none}
+  nav ul.flex-item{  display: block;}
+  .search-container{ width: 100%; top: 77px;}
+  .nav-fix{  z-index: 9; width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: #fff;padding: 100px 0 0 0;
+   .container{ padding: 0;}
+   .col-xs-12{ padding: 0}
+  }
+  .nav-btn-fix{ right: 20px; top: 20px; z-index: 99;}
+  .nav-btn-fix span{ background: #000;}
+  .nav-btn-fix span::after,.nav-btn-fix span::before{ background: #000;}
+  .nav-fix { background: $colorb}
+  .nav-all{ background: $colorb; padding-top: 100px; }
+  .nav-all dl{border-bottom: 1px solid #fff; overflow: hidden; height: 60px;transition: .5s linear all; }
+  .nav-all dl.active{ height: auto;transition: .5s linear all; }
+  .nav-all dl .dd-list{  transition: .5s linear all;opacity: 0; }
+  .nav-all dl.active .dd-list{transition: .5s linear all;opacity: 1;}
+  .nav-all dl:first-child dt{border-top: 1px solid #fff;}
+  .nav-all dt{ line-height: 55px; font-size: 16px; color: #fff; padding-left: 10px;}
+  .nav-all dd{ line-height: 55px; padding-left: 30px; border-top:1px solid rgba(255, 255, 255, .3)}
+  .nav-all a{ display: block; color: #fff;}
+  .phone-more{ width: 50px; border-left: 1px solid #fff; text-align: center; font-size: 20px;}
+
+  .btn-more,.btn-leader{ border-width: 1px; width: 60% !important; line-height: 40px; height: 40px;}
+  .btn-more::after{ height: 1px; top: 19px;}
+  .leader-title{ font-size: 25px; color: $colorb;}
+  .leader-title-eng{ font-size: 16px; color: #d9d9d9; text-transform:uppercase}
+
+}

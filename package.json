@@ -1,0 +1,32 @@
+{
+  "name": "webpack-mpa-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "serve": "nodemon --ext pug,ejs --watch ejs --watch pug --exec \"poi --serve\"",
+    "dev": "poi",
+    "build": "poi --prod",
+    "watch": "poi --watch",
+    "formatoutput": "poi mpa -f"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "fullpage.js": "^3.0.5",
+    "vue": "latest",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-fullpage.js": "^0.1.3"
+  },
+  "devDependencies": {
+    "@stevie/poi-plugin-mpa": "./@stevie/poi-plugin-mpa",
+    "axios": "^0.18.0",
+    "nodemon": "latest",
+    "poi": "latest",
+    "sass": "latest",
+    "sass-loader": "latest",
+    "vue-template-compiler": "latest"
+  }
+}
