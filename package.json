@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@stevie/poi-plugin-mpa": "./@stevie/poi-plugin-mpa",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "nodemon": "latest",
     "poi": "latest",
     "sass": "latest",
